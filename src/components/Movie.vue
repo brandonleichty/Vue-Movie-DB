@@ -3,7 +3,7 @@
 </template>
 
 <script>
-const POSTER_PATH = "http://image.tmdb.org/t/p/w154";
+const POSTER_PATH = "http://image.tmdb.org/t/p/w400";
 export default {
   props: ['movie'],
   computed: {
@@ -17,5 +17,6 @@ export default {
 <style scoped>
 img {
   box-shadow: 0 0 35px black;
+  width: 154px;
 }
 </style>
