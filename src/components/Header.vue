@@ -1,6 +1,10 @@
 <template>
   <header>
-    <h1>{{ newTitle }}</h1>
+    <h1><router-link to="/">{{ title }}</router-link></h1>
+		<!-- <transition name="fade">
+			<h1 v-if="show">Animated</h1>
+		</transition>
+		<button @click="show = !show">Show/Hide</button> -->
   </header>
 </template>
 
@@ -12,18 +16,10 @@ export default {
 	},
 	data() {
 		return {
+			show: false,
 			name: 'Brandon'
 		};
 	},
-	computed: {
-		newTitle: function() {
-			if (this.title === 'hello') {
-				return this.title;
-			} else {
-				return this.name;
-			}
-		}
-	}
 };
 </script>
 
@@ -33,8 +29,13 @@ header {
 	padding: 20px;
 	color: white;
 }
-
 h1 {
 	margin: 0;
 }
+
+/* name-enter -> name-enter-to */
+/* name-enter-active */
+
+/* name-leave -> name-leave-to */
+/* name-leave-active */
 </style>
